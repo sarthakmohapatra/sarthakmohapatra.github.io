@@ -23,55 +23,136 @@
     <meta name="twitter:image" content="">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+      h1 {
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .tbl-header {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .tbl-content {
+        height: 300px;
+        overflow-x: auto;
+        margin-top: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      th {
+        padding: 20px 15px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      td {
+        padding: 15px;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 12px;
+        color: #fff;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+      }
+
+
+      /* demo styles */
+
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+      body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      section {
+        margin: 50px;
+      }
+
+
+      /* follow me template */
+
+      .made-with-love {
+        margin-top: 40px;
+        padding: 10px;
+        clear: left;
+        text-align: center;
+        font-size: 10px;
+        font-family: arial;
+        color: #fff;
+      }
+
+      .made-with-love i {
+        font-style: normal;
+        color: #F50057;
+        font-size: 14px;
+        position: relative;
+        top: 2px;
+      }
+
+      .made-with-love a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .made-with-love a:hover {
+        text-decoration: underline;
+      }
+
+
+      /* for custom scrollbar for webkit browser*/
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+    <script>
+      // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+      $(window).on("load resize ", function() {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({
+          'padding-right': scrollWidth
+        });
+      }).resize();
+    </script>
   </head>
 
   <body>
     <!-- Header -->
-    <header id="header">
-      <div class="container">
-
-        <div id="logo" class="pull-left">
-          <a href="index.html"><img src="img/logo.png" alt="Yanu Groups" title="" /></img></a>
-          <!-- Uncomment below if you prefer to use a text image -->
-          <!--<h1><a href="#hero">Yanu Groups</a></h1>-->
-        </div>
-
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#services">View Our Services</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
-            <li class="menu-has-children"><a href="">Yanu Groups</a>
-              <ul>
-                <li><a href="construction.html">Yanu Construction</a></li>
-                <li><a href="consultancy.html">Yanu Consultancy</a></li>
-                <li><a href="travel.html">Yanu Travels</a></li>
-                <li><a href="finrecovery.html">Yanu Financial Recovery</a></li>
-                <li><a href="realestate.html">Yanu Real Estate</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <!-- #nav-menu-container -->
-
-        <nav class="nav social-nav pull-right d-none d-lg-inline">
-          <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-        </nav>
-      </div>
-    </header>
     <!-- #header -->
     <section class="about" id="about">
       <div class="container text-center">
@@ -90,44 +171,247 @@
 
     <!-- Parallax -->
 
-    <section class="features" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <a href="/w3images/lights.jpg">
-               <img src="http://indiancitys.com/durgapur/Avijit-Tours-and-Travel-Agency-durgapur-burdwan/images/header.jpg" alt="Lights" style="width:100%">
-               <div class="caption">
+    <section>
+      <!--for demo wrap-->
+      <h1>One Way Journeys</h1>
+      <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>Place</th>
+              <th>Prices</th>
+              <th>Timing</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td>Katra Volvo</td>
+              <td>Rs. 1600</td>
+              <td>5:45PM</td>
+            </tr>
 
-               </div>
-             </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <a href="/w3images/nature.jpg">
-               <img src="http://www.namaskarholidays.com/images/home-banner.jpg" alt="Nature" style="width:100%">
-               <div class="caption">
+            <tr>
+              <td>Manali Volvo</td>
+              <td>Rs. 1600</td>
+              <td>5:00PM</td>
+            </tr>
+            <tr>
+              <td>Shimla Volvo</td>
+              <td>Rs. 1600</td>
+              <td>8:00PM</td>
+            </tr>
+            <tr>
+              <td>Mussories Volvo 2*2 AC</td>
+              <td>Rs. 1400</td>
+              <td>9:00PM</td>
+            </tr>
+            <tr>
+              <td>Dehradun 2*2 Ac</td>
+              <td>Rs. 1200</td>
+              <td>9:00PM</td>
+            </tr>
+            <tr>
+              <td>Amirtsar Sleeper 2*2 Ac</td>
+              <td>Rs. 1200</td>
+              <td>5:45PM</td>
+            </tr>
+            <tr>
+              <td>Ajmer 2*2 AC</td>
+              <td>Rs. 1200</td>
+              <td>7:45PM</td>
+            </tr>
+            <tr>
+              <td>Katra AC Sleeper</td>
+              <td>Rs. 1400</td>
+              <td>6:45PM</td>
+            </tr>
+            <tr>
+              <td>Jaipur 2*2 AC</td>
+              <td>Rs. 1200</td>
+              <td>7:45PM</td>
+            </tr>
+            <tr>
+              <td>Udaipur Sleeper AC</td>
+              <td>Rs. 1600</td>
+              <td>7:00PM</td>
+            </tr>
+            <tr>
+              <td>Udaipur Sleeper Volvo AC</td>
+              <td>Rs. 2000</td>
+              <td>7:00PM</td>
+            </tr>
+            <tr>
+              <td>Nainital 2*2 AC</td>
+              <td>Rs. 1200.</td>
+              <td>9:45PM</td>
+            </tr>
+            <tr>
+              <td>Dharmshala AC</td>
+              <td>Rs. 1400</td>
+              <td>6:00PM</td>
+            </tr>
+            <tr>
+              <td>Kathmandu AC</td>
+              <td>Rs. 2600</td>
+              <td>6:30:00PM</td>
+            </tr>
+            <tr>
+              <td>Kathmandu Non AC</td>
+              <td>Rs. 2200</td>
+              <td>6:30:00PM</td>
+            </tr>
+            <tr>
+              <td>Lucknow Sleeper AC</td>
+              <td>Rs. 1600</td>
+              <td>3:00PM</td>
+            </tr>
 
-               </div>
-             </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <a href="/w3images/fjords.jpg">
-               <img src="http://www.gurujitravel.com/packageImages/0_category_Best%20Of%20South%20India%20Tours_20170605171237_Best%20of%20South%20India.jpg" alt="Fjords" style="width:100%">
-               <div class="caption">
+            <tr>
+              <td>Lucknow AC 2x2</td>
+              <td>Rs. 1500</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Faizabad 2x2 AC</td>
+              <td>Rs. 1400</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Faizabad Sleeper AC-</td>
+              <td>Rs. 1800</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Ayodhya Basti 2x2 AC </td>
+              <td>Rs. 1400</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Ayodhya Basti Sleeper AC </td>
+              <td>Rs. 1800</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Gorakhpur 2x2 AC </td>
+              <td>Rs. 1400</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Gorakhpur Sleeper AC </td>
+              <td>Rs. 1600</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Hata Devriya 2x2 AC</td>
+              <td>Rs. 1400</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Hata Devriya Sleeper AC</td>
+              <td>Rs. 1700</td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Khushi Nagar 2x2 AC </td>
+              <td>Rs. 1400 </td>
+              <td>3:00PM</td>
+            </tr>
+            <tr>
+              <td>Khushi Nagar sleeper AC</td>
+              <td>Rs. 1600</td>
+              <td>3:00PM</td>
+              <tr>
+                <td>Gopan ganj 2x2 AC </td>
+                <td>Rs. 1500</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Gopal Ganj sleeper AC</td>
+                <td>Rs. 1800</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Mohamad Pur 2x2 AC </td>
+                <td>Rs. 1400</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Mohamad Pur Sleeper AC </td>
+                <td>Rs. 1700</td>
+                <td>3:00PM</td>
+              </tr>
 
-               </div>
-             </a>
-            </div>
-          </div>
-        </div>
+              <tr>
+                <td>Khajuriya 2x2 AC </td>
+                <td>Rs. 1500</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Khajuriya sleeper AC </td>
+                <td>Rs. 1800</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Sahibganj 2x2 AC </td>
+                <td>Rs. 1500</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Sahibganj sleeper AC </td>
+                <td>Rs. 1700</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Pipra kothi 2x2 AC </td>
+                <td>Rs. 1500</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Pipra Kothi sleeper AC </td>
+                <td>Rs. 1800</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Motihari, Chakia 2x2 AC </td>
+                <td>Rs. 1500</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Motihari Chakia sleeper AC </td>
+                <td>Rs. 1800</td>
+                <td>3:00PM</td>
+              </tr>
 
+              <tr>
+                <td>Sitamari, Chakia 2x2 AC </td>
+                <td>Rs. 1600</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Sitamari, Chakia sleeper AC </td>
+                <td>Rs. 1900</td>
+                <td>3:00PM</td>
+              </tr>
 
+              <tr>
+                <td>Muzaffarpur (Bihar) 2x2 AC </td>
+                <td>Rs. 1600</td>
+                <td>3:00PM</td>
+              </tr>
+              <tr>
+                <td>Muzaffarpur (Bihar) Sleeper AC </td>
+                <td>Rs. 2000</td>
+                <td>3:00PM</td>
+              </tr>
+          </tbody>
+        </table>
       </div>
     </section>
+
     <!-- /Features -->
     <footer class="site-footer">
       <div class="bottom">
@@ -179,9 +463,9 @@
     <script src="lib/lockfixed/lockfixed.min.js"></script>
 
     <!-- Template Specisifc Custom Javascript File -->
-    <script src="js/custom.js"></script>
+    <script src="../js/custom.js"></script>
 
-    <script src="contactform/contactform.js"></script>
+    <script src="../contactform/contactform.js"></script>
 
   </body>
 
